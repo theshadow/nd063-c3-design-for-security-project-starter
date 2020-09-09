@@ -2,4 +2,15 @@ Based on the architecture diagram, and the steps you have taken so far to upload
 
 # Poor practice 1
 
+The EC2 instance for the Web Service is running in a 
+public subnet. It should run within a private subnet.
+
+The VPC should have ingress rules that block all traffic except for port 80.
+
 # Poor practice 2
+
+The EC2 instance for the web service should have a security group that only allowss ingress and egress traffic for port 5000s
+
+The EC2 instance shouldn't allow SSH authentication with passswords.
+
+

@@ -1,3 +1,8 @@
-Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+The followig ports are open to ingress traffic for the projects VPC. I would resolve this by first declaring a DENY rule for all traffic and then selectively opening ports as needed. In the case of this project this would look like:
 
-Bonus - provide recommendations on how to remediate the vulnerabilities.
+- *	All IPv4 traffic 	all All 0.0.0.0/0 	DENY
+- *	All IPv4 traffic 	TCP 80 0.0.0.0/0 	ALLOW
+
+- 20, 21, 23, 27019, 28017, 3389, 4045, 3269, 3306, 5432, 3306, 5432, 27017, 27018, 9200, 9300, 749, 751, 601, 636, 1110, 1433, 1512, 2049
+
+

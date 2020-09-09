@@ -1,0 +1,9 @@
+1. The Web Service EC2 Instance should be moved to the private sub-net to reduce the attack surface.
+2. The Web Service EC2 Instance should have a Security Group that limits communication to be between the load balancer and the EC2 instance
+   - an ingress TCP ALLOW rule for port 5000 from the Application Load Balancer
+   - an egress TCP ALLOW rule for port 5000 to the Application Load Balancer
+3. The VPC should have an ingress NACL ALLOW rule for port 80.
+4. Enable AWS Config to monitor AWS resource configurations.
+5. Enable VPC Flowlogs to monitor traffic to and from the VPC
+6. Enable AWS Security Hub to bring all the security alerts into a single space
+7. Enable AWS Inspector Scan to run the major security profiles/configs over the environment and application.

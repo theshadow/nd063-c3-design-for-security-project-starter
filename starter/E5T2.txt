@@ -2,12 +2,27 @@
 
 ## Scan infrastructure as code templates
 
-### Example vulnerability
-
-##Scan AMI’s or containers for OS vulnerabilities
+There are two for cloudformation that are pretty standard. cfn-lint and cfn-vet are tools for static analysis.
 
 ### Example vulnerability
 
-##Scan an AWS environment for cloud configuration vulnerabilities
+Having the SSH daemon allow password authentication
+
+## Scan AMI’s or containers for OS vulnerabilities
+
+Use AWS Inspector to validate the configuration of the instance.
 
 ### Example vulnerability
+
+An instance with ports open to the public internet
+
+## Scan an AWS environment for cloud configuration vulnerabilities
+
+Use AWS Config to monitor the configuration of resources.
+
+### Example vulnerability
+
+A VPC that doesn't use the least privilege principal to prevent unecessary traffic in.
+
+A VPC without security groups to block unecessary 
+traffic.

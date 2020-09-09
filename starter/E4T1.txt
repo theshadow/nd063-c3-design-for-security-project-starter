@@ -1,5 +1,9 @@
-
-
 # Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
 
+1. Update the NACL for the VPC to block ALL ingress traffic except for port 80 for the Application Load Balancer
+2. Disable SSH access on the Web Service EC2
+
 # Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+
+1. Modify the EC2 IAM Execution Role for the Web Service EC2 instance so that it doesn't allow access to the Secret Recipes S3 Bucket
+2. Modify the EC2 IAM Execution Role for the Attack EC2 instance so that it doesn't allow access to the Secret Recipes S3 Bucket

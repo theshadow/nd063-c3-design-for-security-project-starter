@@ -1,8 +1,17 @@
 
 # What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
 
+1. Move the Web Application Service instance into the Private Subnet
+2. Update the Network ACL to prevent all ingress traffic except for port 80
+
 # Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+
+Yes, by moving to a private endpoint we would only allow traffic from within the VPC.
 
 # Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
 
+No, you will need to perform an additional put action.
+
 # What would happen if the original cloud formation templates are applied to this environment.
+
+The settings would revert
